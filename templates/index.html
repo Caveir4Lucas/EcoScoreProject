@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoScore - Hábitos Sustentáveis</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #0f2a1d, #375534);
+        color: #e3eed4;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      /* CONTAINER CENTRAL */
+      .container {
+        width: 100%;
+        max-width: 950px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+        text-align: center;
+        color: #aec380;
+        margin-bottom: 30px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+      }
+
+      /* CAIXAS DE SEÇÃO */
+      .section-box {
+        background-color: #aec380;
+        color: #061028;
+        border-radius: 18px;
+        padding: 25px 30px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s, box-shadow 0.2s;
+        cursor: pointer;
+      }
+
+      .section-box:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+      }
+
+      .section-box a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+      }
+
+      .section-box h2 {
+        font-size: 1.5rem;
+        color: #375534;
+        margin-bottom: 12px;
+      }
+
+      /* LISTAS */
+      ul {
+        list-style: disc inside;
+        padding-left: 12px;
+      }
+
+      li {
+        margin-bottom: 10px;
+        line-height: 1.6;
+      }
+
+      /* BOTÃO FINAL */
+      .button {
+        display: inline-block;
+        margin: 30px auto 0;
+        padding: 14px 30px;
+        background-color: #aec380;
+        color: #061028;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .button:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+        background-color: #689071;
+        color: #fff;
+      }
+
+      @media (max-width: 768px) {
+        .section-box {
+          padding: 20px;
+        }
+
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        .section-box h2 {
+          font-size: 1.3rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>EcoScore</h1>
+
+      <div class="section-box">
+        <a href="{{ url_for('pagina1') }}">
+          <h2>Tecnologias Aplicadas ao Meio Ambiente</h2>
+          <p>
+            Tecnologias sustentáveis transformam energia, transporte e gestão de
+            recursos, usando drones, IA, materiais biodegradáveis e captura de
+            carbono para proteger o meio ambiente.
+            <strong>Clique para saber mais</strong>
+          </p>
+        </a>
+      </div>
+
+      <div class="section-box">
+        <a href="{{ url_for('pagina2') }}">
+          <h2>Indicadores Reais</h2>
+          <p>
+            Sensores, drones e satélites monitoram o ar, o solo e as florestas,
+            ajudando a combater desmatamento e desperdício. Energias renováveis,
+            como solar no Atacama e turbinas eólicas no Norte da Europa, já
+            abastecem milhões de lares. Veículos elétricos e redes inteligentes
+            tornam cidades mais limpas e sustentáveis.
+            <strong>Clique para saber mais</strong>
+          </p>
+        </a>
+      </div>
+
+      <div class="section-box">
+        <a href="{{ url_for('pagina3') }}">
+          <h2>Gamificação</h2>
+          <p>
+            Use elementos de jogos para tornar tarefas do dia a dia mais
+            divertidas e envolventes. Pontos, desafios e recompensas motivam e
+            engajam os usuários.
+            <strong>Clique para saber mais</strong>
+          </p>
+        </a>
+      </div>
+
+      <div class="section-box">
+        <a href="{{ url_for('pagina4') }}">
+          <h2>Sustentabilidade e Comportamento Individual</h2>
+          <p>
+            Descubra como pequenas ações do dia a dia podem transformar o futuro
+            do planeta. Aprenda sobre os pilares da sustentabilidade e hábitos
+            que fazem a diferença.
+            <strong>Clique para saber mais</strong>
+          </p>
+        </a>
+      </div>
+
+      <!-- Botão centralizado -->
+      <a href="{{ url_for('score') }}" class="button">Ir para o EcoScore</a>
+
+      <a href="{{ url_for('links') }}" class="button">Ver Links da Pesquisa</a>
+    </div>
+  </body>
+</html>

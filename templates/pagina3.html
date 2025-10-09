@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoScore - Hábitos Sustentáveis</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #0f2a1d, #375534);
+        color: #e3eed4;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 950px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+        text-align: center;
+        color: #aec380;
+        margin-bottom: 30px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+      }
+
+      .section-box {
+        background-color: #aec380;
+        color: #061028;
+        border-radius: 18px;
+        padding: 25px 30px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .section-box:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        color: #375534;
+        margin-bottom: 12px;
+      }
+
+      ul {
+        list-style: disc inside;
+        padding-left: 12px;
+      }
+
+      li {
+        margin-bottom: 10px;
+        line-height: 1.6;
+      }
+
+      /* BOTÃO DE VOLTAR / PROSSEGUIR */
+      .bottom-section {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+      }
+
+      a.button,
+      .btn-voltar {
+        display: inline-block;
+        padding: 16px 32px;
+        background-color: #233d21;
+        color: #e3eed4;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border-radius: 14px;
+        text-decoration: none;
+        text-align: center;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s;
+      }
+
+      a.button:hover,
+      .btn-voltar:hover {
+        background-color: #aec380;
+        color: #061028;
+        transform: scale(1.05);
+      }
+
+      @media (max-width: 768px) {
+        .section-box {
+          padding: 20px;
+        }
+        h1 {
+          font-size: 1.8rem;
+        }
+        h2 {
+          font-size: 1.3rem;
+        }
+        a.button,
+        .btn-voltar {
+          padding: 14px 28px;
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>EcoScore</h1>
+
+      <div class="section-box">
+        <h2>O que é Gamificação?</h2>
+        <p>
+          A gamificação é a aplicação de elementos de jogos em contextos que não
+          envolvem diretamente o entretenimento, como saúde, educação e
+          sustentabilidade. Pontos, rankings, desafios e recompensas são
+          utilizados para estimular a participação e engajamento dos usuários,
+          transformando atividades comuns em experiências mais atrativas.
+        </p>
+      </div>
+
+      <div class="section-box">
+        <h2>Como a Gamificação Funciona</h2>
+        <p>
+          Ela se apoia em mecanismos como objetivos claros, feedback imediato,
+          progressão por níveis e recompensas simbólicas. Esses elementos criam
+          um senso de desafio e realização, promovendo engajamento e motivação.
+          Pesquisas mostram que tais recursos aumentam a participação em
+          diferentes áreas, desde a educação até iniciativas coletivas.
+        </p>
+      </div>
+
+      <div class="section-box">
+        <h2>Gamificação e Hábitos Saudáveis</h2>
+        <p>
+          Aplicativos de saúde utilizam gamificação para incentivar atividades
+          físicas, alimentação equilibrada e sono regulado. Ao transformar
+          passos em pontos, calorias queimadas em medalhas ou desafios semanais
+          em conquistas, os apps estimulam usuários a manter rotinas mais
+          saudáveis
+        </p>
+      </div>
+
+      <div class="section-box">
+        <h2>Gamificação e Sustentabilidade</h2>
+        <p>
+          Na esfera ambiental, a gamificação incentiva práticas como reciclagem,
+          economia de água e energia, transporte consciente e consumo
+          responsável. Aplicativos e plataformas educativas têm sido usados para
+          monitorar essas práticas, recompensando ações pró-ambientais e
+          promovendo a conscientização coletiva.
+        </p>
+      </div>
+
+      <div class="section-box">
+        <h2>Benefícios da Gamificação</h2>
+        <ul>
+          <li>
+            <strong>Aumento do engajamento dos usuários</strong>
+          </li>
+          <li>
+            <strong>Aprendizagem ativa e divertida.</strong>
+          </li>
+          <li>
+            <strong>Estímulo à mudança de comportamento no cotidiano.</strong>
+          </li>
+          <li>
+            <strong
+              >Potencial educativo para questões ambientais e de saúde</strong
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="section-box">
+        <h2>Futuro da Gamificação em Hábitos Saudáveis</h2>
+        <p>
+          Tendências apontam para o uso de inteligência artificial, realidade
+          aumentada e dispositivos vestíveis (como smartwatches) na gamificação.
+          Há também potencial para integração em políticas públicas de saúde e
+          sustentabilidade, ampliando seu impacto em escala social
+        </p>
+      </div>
+
+      <div class="section-box">
+        <h2>Conclusão</h2>
+        <p>
+          A gamificação aplicada a hábitos saudáveis e sustentáveis surge como
+          uma estratégia inovadora, capaz de unir tecnologia, diversão e
+          conscientização. Contudo, sua eficácia depende de implementação
+          responsável, que combine recompensas externas com motivação
+          intrínseca. O desafio é transformar o engajamento momentâneo em
+          hábitos duradouros e significativos
+        </p>
+      </div>
+
+      <!-- BOTÃO VOLTAR -->
+      <div class="bottom-section">
+        <a href="{{ url_for('index') }}" class="btn-voltar">Voltar</a>
+      </div>
+    </div>
+  </body>
+</html>

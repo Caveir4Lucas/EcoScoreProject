@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoScore - Hábitos Sustentáveis</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #0f2a1d, #375534);
+        color: #e3eed4;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 950px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+        text-align: center;
+        color: #aec380;
+        margin-bottom: 30px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+      }
+
+      .section-box {
+        background-color: #aec380;
+        color: #061028;
+        border-radius: 18px;
+        padding: 25px 30px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .section-box:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        color: #375534;
+        margin-bottom: 12px;
+      }
+
+      ul {
+        list-style: disc inside;
+        padding-left: 12px;
+      }
+
+      li {
+        margin-bottom: 10px;
+        line-height: 1.6;
+      }
+
+      /* BOTÃO DE VOLTAR / PROSSEGUIR */
+      .bottom-section {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+      }
+
+      a.button,
+      .btn-voltar {
+        display: inline-block;
+        padding: 16px 32px;
+        background-color: #233d21;
+        color: #e3eed4;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border-radius: 14px;
+        text-decoration: none;
+        text-align: center;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s;
+      }
+
+      a.button:hover,
+      .btn-voltar:hover {
+        background-color: #aec380;
+        color: #061028;
+        transform: scale(1.05);
+      }
+
+      @media (max-width: 768px) {
+        .section-box {
+          padding: 20px;
+        }
+        h1 {
+          font-size: 1.8rem;
+        }
+        h2 {
+          font-size: 1.3rem;
+        }
+        a.button,
+        .btn-voltar {
+          padding: 14px 28px;
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>EcoScore</h1>
+
+      <div class="section-box">
+        <h2>Tecnologia e Meio Ambiente</h2>
+        <p>
+          A tecnologia aplicada ao meio ambiente tem revolucionado a forma como monitoramos e preservamos o planeta. 
+          Sensores da Internet das Coisas (IoT) são instalados em florestas, rios, reservatórios e áreas urbanas para coletar dados em tempo real sobre temperatura, qualidade do ar, níveis de poluição e até presença de espécies animais. Por exemplo, sensores de rios podem alertar autoridades sobre enchentes iminentes, evitando desastres e perdas humanas.<br><br>
+
+          Inteligência Artificial (IA) permite analisar grandes volumes de dados e prever eventos ambientais críticos, como incêndios florestais, erosão de solos e poluição de rios. Algoritmos de aprendizado de máquina também otimizam o consumo de energia em cidades inteligentes, ajustando iluminação pública e sistemas de climatização de prédios.<br><br>
+
+          No setor de energia, fontes renováveis como solar e eólica estão sendo integradas de forma inteligente, com monitoramento em tempo real e armazenamento em baterias para garantir energia contínua. A mobilidade sustentável também evoluiu com veículos elétricos, bicicletas compartilhadas e sistemas de transporte público de baixo impacto ambiental.<br><br>
+
+          Além disso, materiais biodegradáveis e tecnologias de captura de carbono estão ajudando a reduzir a pegada ecológica das indústrias e residências. Grafeno em filtros de água, plásticos compostáveis e sistemas de reflorestamento com drones são exemplos práticos de como a tecnologia contribui para um futuro mais sustentável.<br><br>
+        </p>
+      </div>
+
+      <div class="section-box">
+        <h2>Monitoramento e Análise Ambiental</h2>
+        <ul>
+          <li>
+            <strong>Sensores e IoT:</strong> O monitoramento ambiental moderno depende fortemente de sensores e IoT para coletar dados sobre o ar, água e solo. Sensores de qualidade do ar em grandes centros urbanos, como São Paulo e Pequim, permitem identificar áreas com altos índices de poluição e planejar intervenções rápidas. No campo, sensores de umidade do solo e drones monitoram lavouras, ajudando a reduzir desperdício de água e fertilizantes.
+          </li>
+          <li>
+            <strong>Satélites e Drones:</strong> São ferramentas indispensáveis para a preservação ambiental. Satélites monitoram desmatamentos na Amazônia, mudanças na cobertura de gelo polar e o crescimento urbano desordenado. Drones sobrevoam florestas, identificam focos de incêndio, mapeiam espécies ameaçadas e verificam a saúde das plantações.
+          </li>
+          <li>
+            <strong>Inteligência Artificial (IA):</strong> Integra dados, criando modelos que preveem eventos críticos e ajudam a otimizar a produção agrícola, o consumo de energia e a distribuição de recursos. Por exemplo, cidades inteligentes utilizam IA para ajustar o tráfego em tempo real, reduzindo emissões de gases poluentes.
+          </li>
+          <li>
+            <strong>Sistemas de Informação Geográfica (SIG):</strong> Permitem integrar dados geoespaciais de satélites, drones e sensores em mapas interativos, possibilitando planejamento urbano sustentável, gestão de áreas de preservação e resposta rápida a emergências ambientais.
+          </li>
+        </ul>
+      </div>
+
+      <div class="section-box">
+        <h2>Energias Renováveis e Eficiência Energética</h2>
+        <ul>
+          <li>
+            <strong>Fontes Limpas:</strong> Fontes de energia limpa, como solar, eólica e biogás, estão em constante expansão. No deserto do Atacama, no Chile, painéis solares produzem energia suficiente para abastecer milhões de residências. Turbinas eólicas offshore no Norte da Europa fornecem energia para cidades inteiras sem emissão de gases poluentes.
+          </li>
+          <li>
+            <strong>Redes Elétricas Inteligentes:</strong> São sistemas que equilibram a oferta e a demanda de energia em tempo real, integrando múltiplas fontes renováveis e evitando desperdícios. Elas permitem que painéis solares residenciais e pequenos aerogeradores contribuam para a rede, tornando a geração de energia mais descentralizada e sustentável.
+          </li>
+          <li>
+            <strong>Veículos Elétricos e Iluminação LED:</strong> A adoção de veículos elétricos está crescendo em grandes cidades, como Londres e Oslo, com redução significativa de emissões de gases de efeito estufa e poluição sonora. A iluminação LED substitui lâmpadas convencionais, consumindo menos energia e oferecendo maior durabilidade, sendo utilizada tanto em residências quanto em iluminação pública inteligente.
+          </li>
+        </ul>
+      </div>
+
+      <div class="section-box">
+        <h2>Gestão de Recursos e Resíduos</h2>
+        <ul>
+          <li>
+            <strong>Economia Circular:</strong> A economia circular busca reduzir desperdícios ao máximo, promovendo reciclagem, reuso e remanufatura de produtos. Plásticos difíceis de reciclar agora podem ser transformados em novos produtos por meio da reciclagem química. No setor da construção civil, resíduos de obras são reaproveitados para fabricação de novos materiais, reduzindo impactos ambientais.
+          </li>
+          <li>
+            <strong>Tratamento de Água:</strong> O tratamento de água evoluiu com dessalinização, filtragem avançada e sistemas inteligentes de monitoramento que detectam vazamentos, economizando milhões de litros de água por ano. A agricultura de precisão utiliza drones e sensores para monitorar lavouras, aplicando fertilizantes e pesticidas somente onde necessário, preservando a qualidade do solo e evitando contaminação de rios e lençóis freáticos.
+          </li>
+          <li>
+            <strong>Gestão de Resíduos com IoT/IA:</strong> O uso de IoT e IA na gestão de resíduos permite otimizar rotas de coleta, reduzindo consumo de combustível e emissões de CO₂. Além disso, sistemas automatizados de separação de recicláveis aumentam a eficiência da reciclagem, tornando cidades mais limpas e sustentáveis.
+          </li>
+        </ul>
+      </div>
+
+      <div class="section-box">
+        <h2>Novos Materiais, Biotecnologia e Rastreabilidade</h2>
+        <ul>
+          <li>
+            <strong>Materiais Biodegradáveis e Bioplásticos:</strong> Materiais biodegradáveis e bioplásticos estão substituindo plásticos convencionais em embalagens, utensílios domésticos e até roupas, diminuindo a poluição ambiental. O bioetanol de segunda geração aproveita resíduos agroindustriais, como bagaço de cana e palha de milho, para produzir combustível limpo.
+          </li>
+          <li>
+            <strong>Blockchain:</strong> A tecnologia blockchain garante rastreabilidade em cadeias produtivas, assegurando que produtos como madeira, minérios e alimentos vêm de fontes sustentáveis e legais. Isso combate práticas ilegais, como desmatamento e mineração irregular.
+          </li>
+          <li>
+            <strong>Green Computing:</strong> Green Computing e a computação em nuvem otimizam o consumo de energia em data centers, reduzindo a pegada de carbono de empresas de tecnologia. Servidores com IA ajustam a operação conforme a demanda, economizando energia e diminuindo desperdício.
+          </li>
+        </ul>
+      </div>
+
+      <!-- BOTÃO VOLTAR -->
+      <div class="bottom-section">
+       <a href="{{ url_for('index') }}" class="btn-voltar">Voltar</a>
+
+      </div>
+    </div>
+  </body>
+</html>

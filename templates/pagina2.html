@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoScore - Hábitos Sustentáveis</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #0f2a1d, #375534);
+        color: #e3eed4;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 950px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+        text-align: center;
+        color: #aec380;
+        margin-bottom: 30px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+        font-weight: bold;
+      }
+
+      .section-box {
+        background-color: #aec380;
+        color: #061028;
+        border-radius: 18px;
+        padding: 25px 30px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .section-box:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        color: #375534;
+        margin-bottom: 12px;
+        font-weight: bold;
+      }
+
+      ul {
+        list-style: disc inside;
+        padding-left: 12px;
+      }
+
+      li {
+        margin-bottom: 10px;
+        line-height: 1.6;
+      }
+
+      /* BOTÃO DE VOLTAR / PROSSEGUIR */
+      .bottom-section {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+      }
+
+      a.button,
+      .btn-voltar {
+        display: inline-block;
+        padding: 16px 32px;
+        background-color: #233d21;
+        color: #e3eed4;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border-radius: 14px;
+        text-decoration: none;
+        text-align: center;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s;
+      }
+
+      a.button:hover,
+      .btn-voltar:hover {
+        background-color: #aec380;
+        color: #061028;
+        transform: scale(1.05);
+      }
+
+      @media (max-width: 768px) {
+        .section-box {
+          padding: 20px;
+        }
+        h1 {
+          font-size: 1.8rem;
+        }
+        h2 {
+          font-size: 1.3rem;
+        }
+        a.button,
+        .btn-voltar {
+          padding: 14px 28px;
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>EcoScore</h1>
+
+      <div class="section-box">
+        <h2>Sustentabilidade e Desafios no Brasil</h2>
+        <p>
+          Hábitos Sustentáveis dos Brasileiros: Recentemente, uma sondagem da
+          Confederação Nacional da Indústria (CNI) apontou que 81% dos
+          brasileiros disseram adotar hábitos sustentáveis sempre ou na maioria
+          das vezes. Em 2022, esse percentual era de 74%, o que demonstra um
+          crescimento no engajamento com práticas sustentáveis. Fiern+1
+        </p>
+      </div>
+
+      <div class="section-box">
+        <h2>Conceito de Sustentabilidade</h2>
+        <ul>
+          <li>
+            Principais hábitos observados: Entre os hábitos mais citados nos
+            últimos seis meses estão:
+            <br /><br />
+            Evitar desperdício de água: 73% “sempre”, 17% “na maioria das
+            vezes” (total de ~90%). Sema Ceará+1 <br /><br />
+            Evitar desperdício de energia: 69% sempre, 20% na maioria das vezes
+            (~89%). Sema Ceará+1 <br /><br />
+            Reduzir a produção de lixo: 50% sempre, 28% na maioria das vezes
+            (~78%). Sema Ceará+1 <br /><br />
+            Reutilizar água: 52% sempre, 22% na maioria (~74%). Sema Ceará+1
+            <br /><br />
+            Separar lixo para reciclagem: 47% sempre, 18% na maioria (~65%).
+            Sema Ceará+1 <br /><br />
+            Reutilizar ou reaproveitar embalagens: 45% sempre, 25% na maioria
+            (~60%). Sema Ceará+1
+          </li>
+          <li>
+            Barreiras e dificuldades: Apesar do alto índice de adesão a hábitos
+            sustentáveis, a pesquisa também revela vários obstáculos:
+            <br /><br />
+            Disponibilidade: 62% consideram difícil encontrar produtos
+            sustentáveis nas lojas. Sema Ceará+1 <br /><br />
+            Verificação: 45% não verificam se os produtos são produzidos de
+            forma ambientalmente sustentável. Sema Ceará+1 <br /><br />
+            Preço: produtos orgânicos ou com práticas de bem-estar animal ainda
+            enfrentam resistência devido ao valor mais alto. Sema
+            Ceará+2FIEPB+2 <br /><br />
+            Fatores culturais e de costume: falta de campanhas de
+            conscientização, hábitos arraigados e desconhecimento são entraves
+            para maior adoção. Sema Ceará+2FIEPB+2
+          </li>
+          <li>
+            Tendências e perfis: O número de pessoas que praticam mais de cinco
+            ações sustentáveis chegou a 88% da população. FIEPB+1 <br /><br />
+            Pessoas em áreas do interior, de idades mais avançadas e fora das
+            grandes capitais tendem a separar lixo para reciclagem com mais
+            frequência. Sema Ceará
+          </li>
+          <li>
+            Reflexão geral: Esses dados sugerem que, embora haja evolução no
+            comportamento, ainda há desafios estruturais:
+            <br /><br />
+            Políticas públicas e privadas para tornar produtos sustentáveis mais
+            acessíveis. <br /><br />
+            Melhor oferta de coleta seletiva, incentivos fiscais e subsídios
+            para produção sustentável. <br /><br />
+            Ações de educação ambiental, com foco em públicos com menor
+            escolaridade ou acesso.
+          </li>
+        </ul>
+      </div>
+
+      <div class="section-box">
+        <h2>Urbanização no Brasil</h2>
+        <ul>
+          <li>
+            O processo de urbanização no Brasil ocorreu de forma rápida e
+            desordenada, principalmente a partir do século XX, trazendo
+            consequências como poluição, problemas de transporte, aumento de
+            resíduos, degradação ambiental e desigualdades sociais. A gestão
+            urbana tem caráter corretivo, dificultando soluções duradouras. Surge
+            a necessidade de cidades sustentáveis, equilibrando desenvolvimento
+            econômico, inclusão social e preservação ambiental.
+          </li>
+        </ul>
+      </div>
+
+      <div class="section-box">
+        <h2>Conceito de Sustentabilidade</h2>
+        <ul>
+          <li>
+            Consolidado em conferências como Estocolmo (1972), Eco-92 e Agenda
+            21. <br /><br />
+            Definição mais conhecida: Relatório Brundtland (1987): “atender às
+            necessidades do presente sem comprometer as gerações futuras”.
+            <br /><br />
+            Dimensões envolvidas: uso eficiente de recursos, limites ao
+            crescimento, equidade social e ética intergeracional.
+          </li>
+        </ul>
+      </div>
+
+      <div class="section-box">
+        <h2>Cidade Sustentável</h2>
+        <ul>
+          <li>
+            Uma cidade sustentável deve garantir: <br /><br />
+            Moradia digna <br />
+            Saneamento básico <br />
+            Mobilidade eficiente <br />
+            Trabalho e lazer <br />
+            Qualidade ambiental <br />
+            Inclusão social <br /><br />
+            Ações necessárias: planejamento integrado, transporte coletivo,
+            reciclagem, conservação ambiental e políticas contra desigualdades.
+          </li>
+        </ul>
+      </div>
+
+      <div class="section-box">
+        <h2>Desperdício de Energia Elétrica no Brasil</h2>
+        <ul>
+          <li>
+            Estimado em 43 TWh por ano → equivalente ao consumo de 20 milhões de
+            residências. <br /><br />
+            Comparável à operação da terceira maior usina do país, dedicada
+            apenas ao desperdício. <br /><br />
+            Reduções recentes: cerca de 10 TWh economizados. <br /><br />
+            Custos: <br />
+            Conservação: R$ 104 por MWh <br />
+            Nova geração: R$ 282 por MWh <br /><br />
+            Motores industriais → 68% do consumo, muitos com 19 anos de uso em
+            média, já rebobinados e ineficientes. Automação industrial pode
+            gerar ganhos de até 60% em alguns processos. <br /><br />
+            Problema: foco em ampliar oferta em crises, e não na redução via
+            eficiência. <br /><br />
+            Concessionárias devem investir 0,5% da Receita Operacional Líquida
+            em eficiência energética, mas há poucos projetos.
+          </li>
+        </ul>
+      </div>
+
+      <div class="section-box">
+        <h2>Indicadores de Sustentabilidade</h2>
+        <ul>
+          <li>
+            Ferramentas para medir, monitorar e orientar políticas públicas.
+            <br /><br />
+            Permitem diagnóstico de problemas urbanos, definição de prioridades
+            e gestão mais transparente. <br /><br />
+            Dificuldades: cálculos complexos, diversidade de conceitos e falta
+            de dados consistentes.
+          </li>
+        </ul>
+      </div>
+
+      <div class="section-box">
+        <h2>Programa Cidades Sustentáveis (PCS)</h2>
+        <ul>
+          <li>
+            Criado em 2012 pela Rede Nossa São Paulo, Rede Social Brasileira por
+            Cidades Justas e Sustentáveis e Instituto Ethos. <br /><br />
+            Mais de 300 indicadores gerais e 100 básicos, adaptados a cidades
+            pequenas. <br /><br />
+            12 eixos temáticos: <br />
+            Governança <br />
+            Bens naturais comuns <br />
+            Equidade, justiça social e cultura de paz <br />
+            Gestão local para a sustentabilidade <br />
+            Planejamento e desenho urbano <br />
+            Cultura para a sustentabilidade <br />
+            Educação e qualidade de vida <br />
+            Economia local dinâmica e criativa <br />
+            Consumo responsável <br />
+            Mobilidade <br />
+            Saúde <br />
+            Do local para o global (mudanças climáticas e emissões de gases)
+            <br /><br />
+            Exemplos de indicadores <br />
+            Área verde por habitante <br />
+            Qualidade do ar <br />
+            Tratamento de esgoto <br />
+            Taxa de analfabetismo <br />
+            Mortalidade infantil <br />
+            Diversidade na administração pública <br />
+            Orçamento participativo <br />
+            Número de ciclovias <br />
+            Mortes no trânsito <br />
+            Emissões de CO₂
+          </li>
+        </ul>
+      </div>
+
+      <div class="section-box">
+        <h2>Resultados do Estudo</h2>
+        <ul>
+          <li>
+            O uso de indicadores simplifica a análise da sustentabilidade urbana
+            e fortalece a gestão pública. <br /><br />
+            Contribuem para políticas mais participativas. <br /><br />
+            Não devem ser usados isoladamente para evitar visões parciais.
+            <br /><br />
+            É essencial compreender inter-relações e adaptar às condições
+            locais.
+          </li>
+        </ul>
+      </div>
+
+      <div class="section-box">
+        <h2>Desperdício de Água Potável no Brasil</h2>
+        <ul>
+          <li>
+            Em 2021, 40,3% da água tratada foi perdida na distribuição (contra
+            36,7% em 2015). <br /><br />
+            Significa que, a cada 100 litros de água, quase 40 não chegam ao
+            consumidor. <br /><br />
+            Em 2021, foram desperdiçados 7,3 bilhões de m³ – o equivalente a 8
+            mil piscinas olímpicas por dia. <br /><br />
+            3,8 bilhões de m³ perdidos apenas em vazamentos → suficiente para
+            abastecer 67 milhões de pessoas por um ano. <br /><br />
+            Impactos: ambientais, econômicos e aumento da captação de
+            mananciais.
+          </li>
+        </ul>
+      </div>
+
+      <!-- BOTÃO VOLTAR -->
+      <div class="bottom-section">
+        <a href="{{ url_for('index') }}" class="btn-voltar">Voltar</a>
+      </div>
+    </div>
+  </body>
+</html>

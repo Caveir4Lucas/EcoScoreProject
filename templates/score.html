@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Marque sua pontuação</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>EcoScore</h1>
+      <p style="text-align: center; margin-bottom: 25px">
+        Responda às perguntas sobre seus hábitos sustentáveis no cotidiano.
+      </p>
+
+      <form action="/avaliar" method="post">
+        <div class="pergunta">
+          <label
+            >Fecha a torneira ao escovar os dentes e ao ensaboar a louça?</label
+          >
+          <select name="economia_agua" required>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </div>
+
+        <div class="pergunta">
+          <label>Apaga as luzes e desliga os aparelhos não utilizados?</label>
+          <select name="consumo_energia" required>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </div>
+
+        <div class="pergunta">
+          <label>Evita descartáveis e usa os dois lados do papel?</label>
+          <select name="reducao_lixo" required>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </div>
+
+        <div class="pergunta">
+          <label
+            >Reutiliza embalagens e conserta objetos ao invés de
+            descartá-los?</label
+          >
+          <select name="reutilizacao" required>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </div>
+
+        <div class="pergunta">
+          <label>Evita desperdício de comida?</label>
+          <select name="alimentacao_sustentavel" required>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </div>
+
+        <div class="pergunta">
+          <label
+            >Usa transporte público, bicicleta ou caminha sempre que
+            possível?</label
+          >
+          <select name="transporte" required>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </div>
+
+        <div class="pergunta">
+          <label
+            >Separa corretamente materiais recicláveis do lixo comum?</label
+          >
+          <select name="separar_lixo" required>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </div>
+
+        <div class="pergunta">
+          <label
+            >Descarta corretamente pilhas, baterias e lâmpadas em pontos de
+            coleta?</label
+          >
+          <select name="descarte_correto" required>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </div>
+
+        <div class="pergunta">
+          <label
+            >Ao comprar eletrodomésticos, escolhe os mais eficientes?</label
+          >
+          <select name="escolhas_inteligentes" required>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </div>
+
+        <div class="pergunta">
+          <label>Compra produtos de forma consciente e sustentável?</label>
+          <select name="consumo_consciente" required>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </div>
+
+        <div class="pergunta">
+          <label
+            >Prefere roupas e brinquedos usados, incentivando a economia
+            circular?</label
+          >
+          <select name="valorize_existente" required>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+        </div>
+
+        <button type="submit">Calcular EcoScore</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoScore - Hábitos Sustentáveis</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #0f2a1d, #375534);
+        color: #e3eed4;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 950px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+        text-align: center;
+        color: #aec380;
+        margin-bottom: 30px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+      }
+
+      .section-box {
+        background-color: #aec380;
+        color: #061028;
+        border-radius: 18px;
+        padding: 25px 30px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .section-box:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+      }
+
+      .section-box h2 a {
+        text-decoration: none;
+        color: #375534;
+      }
+
+      .section-box h2 a:hover {
+        text-decoration: underline;
+      }
+
+      ul {
+        list-style: disc inside;
+        padding-left: 12px;
+      }
+
+      li {
+        margin-bottom: 10px;
+        line-height: 1.6;
+      }
+
+      li a {
+        color: #061028;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      li a:hover {
+        text-decoration: underline;
+      }
+
+      .button {
+        display: inline-block;
+        margin: 30px auto 0;
+        padding: 14px 30px;
+        background-color: #aec380;
+        color: #061028;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .button:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+        background-color: #689071;
+        color: #fff;
+      }
+
+      @media (max-width: 768px) {
+        .section-box {
+          padding: 20px;
+        }
+
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        .section-box h2 {
+          font-size: 1.3rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>LINKS</h1>
+
+      <div class="section-box">
+        <h2><a href="{{ url_for('pagina1') }}">Tecnologias Aplicadas ao Meio Ambiente</a></h2>
+        <ul>
+          <li><a href="https://www.iea.org/" target="_blank">Agência Internacional de Energia (IEA)</a></li>
+          <li><a href="https://www.irena.org/" target="_blank">Agência Internacional de Energia Renovável (IRENA)</a></li>
+          <li><a href="https://www.ipcc.ch/" target="_blank">Painel Intergovernamental sobre Mudanças Climáticas (IPCC)</a></li>
+          <li><a href="https://ellenmacarthurfoundation.org/" target="_blank">Fundação Ellen MacArthur</a></li>
+          <li><a href="https://www.who.int/topics/water/en/" target="_blank">OMS - Água e Saneamento</a></li>
+          <li><a href="https://www.microsoft.com/en-us/sustainability" target="_blank">Microsoft Sustentabilidade</a></li>
+        </ul>
+      </div>
+
+      <div class="section-box">
+        <h2><a href="{{ url_for('pagina2') }}">Indicadores Reais</a></h2>
+        <ul>
+          <li><a href="https://fiepb.com.br/noticia/88-dos-brasileiros-adotam-mais-de-5-praticas-sustentaveis-diz-pesquisa-da-cni" target="_blank">Pesquisa CNI - 88% dos brasileiros adotam práticas sustentáveis</a></li>
+          <li><a href="https://www.sema.ce.gov.br/2024/02/05/pesquisa-aponta-que-81-dos-brasileiros-adotam-habitos-sustentaveis/" target="_blank">Pesquisa SEMA - 81% adotam hábitos sustentáveis</a></li>
+          <li><a href="https://www.fiern.org.br/81-dos-brasileiros-adotam-habitos-sustentaveis-revela-pesquisa-da-cni/" target="_blank">FIERN - Hábitos sustentáveis no Brasil</a></li>
+          <li><a href="https://www.confere.org.br/noticias.php?p=11208" target="_blank">Confere - Sustentabilidade e comportamento ambiental</a></li>
+          <li><a href="https://fiesc.com.br/pt-br/imprensa/desperdicio-eletrico-no-brasil-equivale-ao-consumo-de-20-milhoes-de-residencias" target="_blank">FIESC - Desperdício elétrico no Brasil</a></li>
+        </ul>
+      </div>
+
+      <div class="section-box">
+        <h2><a href="{{ url_for('pagina3') }}">Gamificação</a></h2>
+        <ul>
+          <li><a href="https://periodicos.sbu.unicamp.br/ojs/index.php/etd/article/view/8674830" target="_blank">Gamificação e Educação Ambiental (Unicamp)</a></li>
+          <li><a href="https://ric.cps.sp.gov.br/handle/123456789/26873" target="_blank">Gamificação em práticas educacionais (CPS)</a></li>
+          <li><a href="https://ri.ufs.br/handle/riufs/20555" target="_blank">Estudo sobre gamificação e sustentabilidade (UFS)</a></li>
+          <li><a href="https://ojs.revistacontemporanea.com/ojs/index.php/home/article/view/1550" target="_blank">Gamificação como ferramenta motivacional</a></li>
+          <li><a href="https://publicacoes.unifil.br/index.php/Revistateste/article/view/2596" target="_blank">Gamificação e engajamento social</a></li>
+          <li><a href="https://periodicosuneal.emnuvens.com.br/intersecao/article/view/588" target="_blank">Gamificação no ensino de sustentabilidade</a></li>
+          <li><a href="https://periodicos.ufsm.br/reveducacao/article/view/70598/63138" target="_blank">Aplicações da gamificação em educação ambiental</a></li>
+        </ul>
+      </div>
+
+      <div class="section-box">
+        <h2><a href="{{ url_for('pagina4') }}">Sustentabilidade e Comportamento Individual</a></h2>
+        <ul>
+          <li><a href="https://www.scielo.br/j/qn/a/VkxbRDxfJvvpwRjZfCTsJYC/?format=html&lang=pt" target="_blank">SciELO - Sustentabilidade e Química Verde</a></li>
+          <li><a href="https://brasil.un.org/pt-br/91863-agenda-2030-para-o-desenvolvimento-sustent%C3%A1vel" target="_blank">ONU - Agenda 2030</a></li>
+          <li><a href="https://agencia.ufc.br/brasileiros-tem-mais-comportamentos-sustentaveis-quando-moram-fora-do-que-no-proprio-pais-avalia-estudo/" target="_blank">UFC - Estudo sobre comportamentos sustentáveis</a></li>
+          <li><a href="https://paineldemudancasclimaticas.org.br/noticia/comportamentos-sustentaveis" target="_blank">Painel de Mudanças Climáticas - Comportamentos Sustentáveis</a></li>
+          <li><a href="https://www.lassu.usp.br/sustentabilidade/pilares-da-sustentabilidade/" target="_blank">USP - Pilares da Sustentabilidade</a></li>
+          <li><a href="https://meiosustentavel.com.br/sustentabilidade/" target="_blank">Meio Sustentável - Portal de notícias</a></li>
+        </ul>
+      </div>
+
+      <a href="{{ url_for('index') }}" class="button">Ir para a Página Inicial</a>
+    </div>
+  </body>
+</html>

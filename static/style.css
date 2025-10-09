@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+}
+
+
+body {
+    background: linear-gradient(135deg, #0F2A1D, #375534);
+    color: #E3EED4;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* CONTAINER CENTRAL */
+.container {
+    width: 100%;
+    max-width: 950px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background: #689071;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+h1 {
+    font-size: 2.2rem;
+    text-align: center;
+    color: #AEC380;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* SEÇÃO DE SCORE */
+.top-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* CAIXAS DE SCORE E RESULTADOS */
+.card {
+    background: #AEC380;
+    color: #375534;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* NÍVEL */
+.nivel {
+    background: #E3EED4;
+    padding: 30px;
+    color: #375534;
+    border-radius: 12px;
+    margin-top: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ALERTAS E RECOMENDAÇÕES */
+.middle-section {
+    background: #0F2A1D;
+    padding: 20px;
+    border-radius: 18px;
+    display: flex;
+    font-size: 1rem;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.middle-section ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.middle-section li {
+    background: #AEC380;
+    color:#0F2A1D ;
+    padding: 14px 16px;
+    border-radius: 12px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* BOTÃO DE VOLTAR / PROSSEGUIR */
+.bottom-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+a.button,
+.btn-voltar {
+    display: inline-block;
+    padding: 16px 32px;
+    background-color: #233d21;
+    color: #E3EED4;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 14px;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+}
+
+a.button:hover,
+.btn-voltar:hover {
+    background-color: #AEC380;
+    color: #061028;
+    transform: scale(1.05);
+}
+
+/* FORMULÁRIO DE SCORE */
+.pergunta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+select {
+    border-radius: 8px;
+    border: 1px solid #375534;
+    padding: 8px 12px;
+    font-size: 16px;
+    outline: none;
+}
+
+select:focus {
+    border-color: #0F2A1D;
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.3);
+}
+
+button {
+    background-color: #233d21;
+    color: #E3EED4;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: block;
+    margin: 25px auto 0 auto;
+}
+
+button:hover {
+    background-color: #083814;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+
+@media (max-width: 768px) {
+
+    .card,
+    .nivel,
+    .middle-section li,
+    a.button,
+    .btn-voltar,
+    button {
+        font-size: 0.95rem;
+        padding: 12px 20px;
+    }
+}
+
+/* Caixa para perguntas */
+.pergunta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #AEC380;
+    color: #375534;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Resultado - EcoScore</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Resultado do EcoScore</h1>
+
+      <!-- Seção 1 - Scores -->
+      <section class="card">
+        <h2>Seus Scores</h2>
+        <p><strong>Score Ambiental:</strong> {{ score_ambiental }}</p>
+        <p><strong>Score Pessoal:</strong> {{ score_pessoal }}</p>
+        <p><strong>Total:</strong> {{ score }}</p>
+      </section>
+
+      <!-- Seção 2 - Nível -->
+      <section class="nivel">
+        <h2>Nível</h2>
+        <p><strong>{{ nivel }}</strong></p>
+        <p>{{ resultado }}</p>
+      </section>
+
+      <!-- Seção 3 - Recomendações / Alertas -->
+      <section class="middle-section">
+        {% if alertas %}
+        <h2>Hábitos que podem melhorar</h2>
+        <ul>
+          {% for alerta in alertas %}
+          <li>{{ alerta }}</li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p>Parabéns! Nenhum alerta, sua rotina está excelente!</p>
+        {% endif %}
+      </section>
+
+      <!-- Seção 4 - Botão Voltar -->
+      <div class="bottom-section">
+        <a href="{{ url_for('index') }}" class="btn-voltar">Voltar</a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoScore - Hábitos Sustentáveis</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #0f2a1d, #375534);
+        color: #e3eed4;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 950px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+        text-align: center;
+        color: #aec380;
+        margin-bottom: 30px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+      }
+
+      .section-box {
+        background-color: #aec380;
+        color: #061028;
+        border-radius: 18px;
+        padding: 25px 30px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+
+      .section-box:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        color: #375534;
+        margin-bottom: 12px;
+      }
+
+      ul {
+        list-style: disc inside;
+        padding-left: 12px;
+      }
+
+      li {
+        margin-bottom: 10px;
+        line-height: 1.6;
+      }
+
+      /* BOTÃO DE VOLTAR / PROSSEGUIR */
+      .bottom-section {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+      }
+
+      a.button,
+      .btn-voltar {
+        display: inline-block;
+        padding: 16px 32px;
+        background-color: #233d21;
+        color: #e3eed4;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border-radius: 14px;
+        text-decoration: none;
+        text-align: center;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s;
+      }
+
+      a.button:hover,
+      .btn-voltar:hover {
+        background-color: #aec380;
+        color: #061028;
+        transform: scale(1.05);
+      }
+
+      @media (max-width: 768px) {
+        .section-box {
+          padding: 20px;
+        }
+        h1 {
+          font-size: 1.8rem;
+        }
+        h2 {
+          font-size: 1.3rem;
+        }
+        a.button,
+        .btn-voltar {
+          padding: 14px 28px;
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>EcoScore</h1>
+
+      <div class="section-box">
+        <h2>Sustentabilidade e Comportamento Individual</h2>
+        <p>
+          A sustentabilidade visa assegurar o futuro do planeta por meio do uso
+          de recursos econômicos, naturais e sociais. Adotar uma vida mais
+          consciente por meio de pequenas ações que beneficiam o meio ambiente e
+          promovem o desenvolvimento econômico de maneira responsável tornou-se
+          uma necessidade urgente no mundo contemporâneo. A sustentabilidade
+          busca soluções para reduzir os problemas do planeta, procurando
+          maneiras de viver, produzir e consumir sem esgotar os recursos
+          naturais.
+        </p>
+      </div>
+
+      <div class="section-box">
+        <h2>Três pilares da sustentabilidade:</h2>
+        <ul>
+          <li>
+            <strong>Ambiental :</strong> concentra-se na conservação e proteção
+            do meio ambiente, assegurando que os recursos naturais sejam usados
+            de maneira responsável e sustentável, além de incluir iniciativas
+            que ajudem a preservar a vida no planeta.
+          </li>
+          <li>
+            <strong>Econômico :</strong> Fomenta um crescimento econômico
+            sustentável a longo prazo, assegurando que as atividades produtivas
+            gerem renda e empregos sem causar danos ao meio ambiente e à
+            sociedade.
+          </li>
+          <li>
+            <strong>Social :</strong> diz respeito à qualidade de vida,
+            garantindo que todos tenham acesso ao essencial na sociedade, como
+            educação, saúde e habitação, fomentando o bem-estar coletivo.
+          </li>
+        </ul>
+        <p>
+          Adotar práticas sustentáveis é essencial para a construção de um
+          futuro. É urgente adotar práticas sustentáveis em face dos desafios
+          ambientais, econômicos e sociais que ameaçam a existência do planeta.
+          Com conscientização e transformação das atitudes individuais e
+          coletivas, podemos assegurar um mundo mais saudável para as próximas
+          gerações. De acordo com a ONU (2015), a Agenda 2030 propõe um plano de
+          ação global que inclui 17 Objetivos de Desenvolvimento Sustentável
+          (ODS). Esses planos têm como objetivo melhorar o mundo por meio de uma
+          vida sustentável. Entre esses objetivos estão o incentivo ao consumo
+          consciente, a garantia de acesso à energia limpa, o enfrentamento das
+          mudanças climáticas e a preservação do meio ambiente.
+        </p>
+      </div>
+
+      <div class="section-box">
+        <h2>Comportamento individual:</h2>
+        <p>
+          Fundamental para o funcionamento adequado da sustentabilidade. Ações
+          simples podem causar um grande impacto, como: Reduzir o consumo de
+          água Diminuir o consumo de energia elétrica Reduzir o uso do carro e
+          optar pela bicicleta Prevenir o desperdício de alimentos Classificar o
+          lixo reciclável Optar por produtos locais e orgânicos é uma maneira
+          significativa de promover a sustentabilidade no cotidiano. Ao adotar
+          práticas individuais que favorecem a preservação ambiental,
+          encoraja-se outras pessoas a fazerem o mesmo. Isso traz benefícios
+          significativos para a preservação dos recursos naturais e diminuição
+          da degradação ambiental.
+        </p>
+      </div>
+
+      <!-- BOTÃO VOLTAR -->
+      <div class="bottom-section">
+        <a href="{{ url_for('index') }}" class="btn-voltar">Voltar</a>
+      </div>
+    </div>
+  </body>
+</html>
