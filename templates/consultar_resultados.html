@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Resultados do EcoScore</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2a1d, #375534);
+      color: #e3eed4;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #aec380;
+      margin-bottom: 30px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    }
+
+    table {
+      width: 90%;
+      max-width: 900px;
+      border-collapse: collapse;
+      background: #fff;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
+      overflow: hidden;
+      color: #1a1a1a; /* <-- texto escuro dentro da tabela */
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    th {
+      background-color: #a5d6a7;
+      color: #061028;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #f1f8e9;
+    }
+
+    p {
+      text-align: center;
+      margin-top: 20px;
+      color: #171d0f;
+    }
+
+    .voltar {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 12px 28px;
+      background-color: #aec380;
+      color: #061028;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+    }
+
+    .voltar:hover {
+      background-color: #689071;
+      color: #fff;
+      transform: translateY(-4px);
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+    }
+
+    @media (max-width: 768px) {
+      table {
+        width: 100%;
+        font-size: 0.9rem;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Resultados de {{ usuario }}</h1>
+
+  {% if resultados %}
+  <table>
+    <tr>
+      <th>Data</th>
+      <th>Score Ambiental</th>
+      <th>Score Pessoal</th>
+      <th>Total</th>
+      <th>Nível</th>
+      <th>Resultado</th>
+    </tr>
+    {% for r in resultados %}
+    <tr>
+      <td>{{ r.data }}</td>
+      <td>{{ r.score_ambiental }}</td>
+      <td>{{ r.score_pessoal }}</td>
+      <td>{{ r.total }}</td>
+      <td>{{ r.nivel }}</td>
+      <td>{{ r.resultado }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% else %}
+  <p>Nenhum resultado encontrado.</p>
+  {% endif %}
+
+  <a href="{{ url_for('index') }}" class="voltar">← Voltar</a>
+</body>
+</html>
