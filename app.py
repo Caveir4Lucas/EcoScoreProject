@@ -1,31 +1,3 @@
-"""
-EcoScore - Sistema de Hábitos Sustentáveis
-
-Principais funcionalidades:
-1. Gerenciamento de usuários:
-   - Cadastro, login e logout.
-   - Proteção de rotas com login_required.
-
-2. Avaliação de hábitos sustentáveis:
-   - Recebe respostas do usuário sobre hábitos ambientais e pessoais.
-   - Calcula score ambiental, score pessoal, total e nível.
-   - Gera alertas para hábitos não cumpridos.
-   - Salva resultados em arquivo JSON.
-
-3. Renderização de páginas:
-   - Páginas principais: index, score, resultado e links.
-   - Páginas auxiliares: pagina1, pagina2, pagina3, pagina4.
-
-4. Funções de suporte:
-   - Salvar resultados em JSON.
-   - Definir nível baseado no score.
-   - Carregar e salvar usuários.
-
-5. Segurança:
-   - Uso de session para controle de login.
-   - Flash para mensagens de aviso e sucesso.
-"""
-
 from flask import Flask, render_template, request, redirect, flash, session, url_for
 import json
 import os
@@ -52,6 +24,13 @@ def salvar_resultado(dados):
 
     with open(ARQUIVO_JSON, "w", encoding="utf-8") as f:
         json.dump(historico, f, indent=4, ensure_ascii=False)
+
+# Função para carregar resultados
+def carregar_resultados():
+    if not os.path.exists(ARQUIVO_JSON):
+        return []
+    with open(ARQUIVO_JSON, "r", encoding="utf-8") as f:
+        return json.load(f)
 
 # Função para definir nível
 def nivel_por_score(total):
@@ -175,6 +154,19 @@ def pagina4():
 @login_required
 def links():
     return render_template("links.html")
+
+# -------------------- NOVA ROTA: CONSULTA DE RESULTADOS --------------------
+
+@app.route("/consultar_resultados")
+@login_required
+def consultar_resultados():
+    usuario = session.get("usuario")
+    resultados = carregar_resultados()
+
+    # Filtra apenas resultados do usuário logado
+    resultados_usuario = [r for r in resultados if r.get("usuario") == usuario]
+
+    return render_template("consultar_resultados.html", usuario=usuario, resultados=resultados_usuario)
 
 # -------------------- ROTA DE AVALIAÇÃO --------------------
 
